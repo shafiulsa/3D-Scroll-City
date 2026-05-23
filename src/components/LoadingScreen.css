@@ -1,0 +1,65 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+}
+
+.loading-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loading-content h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
+}
+
+.progress-text {
+  font-size: 1.5rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+.enter-button {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.enter-button:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}

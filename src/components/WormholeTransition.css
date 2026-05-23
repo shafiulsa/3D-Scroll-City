@@ -1,0 +1,46 @@
+.wormhole-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wormhole-tunnel {
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 10vmin rgba(255, 255, 255, 0.1),
+    0 0 0 20vmin rgba(255, 255, 255, 0.1),
+    0 0 0 30vmin rgba(255, 255, 255, 0.1),
+    0 0 0 40vmin rgba(255, 255, 255, 0.1),
+    0 0 0 50vmin rgba(255, 255, 255, 0.1),
+    0 0 0 60vmin rgba(255, 255, 255, 0.1),
+    0 0 0 70vmin rgba(255, 255, 255, 0.1),
+    0 0 0 80vmin rgba(255, 255, 255, 0.1),
+    0 0 0 90vmin rgba(255, 255, 255, 0.1),
+    0 0 0 100vmin rgba(255, 255, 255, 0.1),
+    0 0 50px 20px rgba(0, 150, 255, 0.5) inset;
+  animation: warp 2.5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+@keyframes warp {
+  0% {
+    transform: scale(0.1) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(20) rotate(720deg);
+    opacity: 0;
+  }
+}
