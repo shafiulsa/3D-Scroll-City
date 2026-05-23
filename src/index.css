@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #050505; /* Deep dark background */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 
+  The canvas container is fixed behind everything else.
+  It stays put while the HTML content scrolls over it.
+*/
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* Let clicks pass through to HTML if needed */
+}
+
+/* 
+  The scroll wrapper creates the scrollable area.
+  Its height dictates how long the scroll experience is.
+*/
+.scroll-wrapper {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto; 
+}
+
+/* 
+  Each panel takes up 1.5 times the viewport height. 
+  This stretches the scrolling distance, slowing down the animation rate.
+*/
+.panel {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Transparent background to see the 3D scene behind it */
+  background: transparent; 
+}
+
+.panel h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.panel p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
